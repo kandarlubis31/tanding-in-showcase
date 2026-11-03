@@ -14,6 +14,18 @@
 
 ---
 
+## 📸 Tampilan
+
+### Desktop
+
+![Tanding-in — halaman utama, tampilan desktop](screenshots/desktop.png)
+
+### Mobile
+
+![Tanding-in — halaman utama, tampilan mobile](screenshots/mobile.png)
+
+---
+
 ## ❌ Masalahnya
 
 - Petinju amatir cari sparring lewat **grup WhatsApp/Instagram** — info Lawas, tidak bisa filter level, sering tidak nyambung jadwalnya
