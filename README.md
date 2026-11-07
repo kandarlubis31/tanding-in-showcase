@@ -54,18 +54,18 @@ Platform matchmaking sparring tinju: lengkapi profil boksing (kelas, record, gay
 
 ```mermaid
 flowchart TB
- U[" Petinju<br/>Next.js 14 · React 18 · Tailwind<br/>swipe · chat · profile · badges"]
- subgraph BE[" Express + TypeScript (pnpm workspaces)"]
- MW["helmet → rate-limit → cors → compression"]
- RT["9 Route modules<br/>auth · profiles · matchmaking · chat<br/>admin · upload · verification · badges · webhooks"]
- WS["Socket.io gateway<br/>join:rooms · message:send<br/>typing · badge:awarded"]
- end
- DB[(" Prisma ORM<br/>11 models: User · BoxerProfile · Match<br/>ChatRoom · ChatMessage · SparringRequest<br/>SparReview · Badge · UserBadge · Report")]
- G[" next-auth<br/>Google OAuth"]
- U --> MW
- MW --> RT --> DB
- U -.->|"realtime"| WS --- RT
- U -.-> G
+    U[" Petinju<br/>Next.js 14 · React 18 · Tailwind<br/>swipe · chat · profile · badges"]
+    subgraph BE[" Express + TypeScript (pnpm workspaces)"]
+        MW["helmet → rate-limit → cors → compression"]
+        RT["9 Route modules<br/>auth · profiles · matchmaking · chat<br/>admin · upload · verification · badges · webhooks"]
+        WS["Socket.io gateway<br/>join:rooms · message:send<br/>typing · badge:awarded"]
+    end
+    DB[(" Prisma ORM<br/>11 models: User · BoxerProfile · Match<br/>ChatRoom · ChatMessage · SparringRequest<br/>SparReview · Badge · UserBadge · Report")]
+    G[" next-auth<br/>Google OAuth"]
+    U --> MW
+    MW --> RT --> DB
+    U -.->|"realtime"| WS --- RT
+    U -.-> G
 ```
 
 - **Stack:** Node.js + Express 4.19 · Prisma 5.22 (SQLite dev / PostgreSQL prod, 11 models) · Socket.io 4.8 · Next.js 14.2 + React 18 · Tailwind 3.4 · Framer Motion 11 · next-auth 4.24 · Swagger UI (`/api-docs`)
